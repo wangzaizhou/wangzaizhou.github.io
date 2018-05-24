@@ -92,8 +92,8 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "百度",
-        href: "http:// www.Baidu.com"
+        title: "简书",
+        href: "https://www.jianshu.com/"
     },{
         title: "简书·BY",
         href: "http://www.jianshu.com/u/e71990ada2fd"
