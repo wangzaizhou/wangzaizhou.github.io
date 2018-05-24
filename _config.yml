@@ -95,13 +95,13 @@ friends: [
         title: "简书",
         href: "https://www.jianshu.com/"
     },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        title: "掘金",
+        href: "https://juejin.im"
     },{
-        title: "Apple",
-        href: "https://apple.com"
+        title: "开源分享",
+        href: "http://mobdevgroup.com/"
     },{
-        title: "魏友明的博客",
-        href: "http://ylfcl.com/"
+        title: "LeetCode题库",
+        href: "https://leetcode-cn.com/problemset/all/"
     }
 ]
