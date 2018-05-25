@@ -98,8 +98,8 @@ friends: [
         title: "掘金",
         href: "https://juejin.im"
     },{
-        title: "开源分享",
-        href: "http://mobdevgroup.com/"
+        title: "Flutter 中文网",
+        href: "https://flutterchina.club/"
     },{
         title: "LeetCode题库",
         href: "https://leetcode-cn.com/problemset/all/"
