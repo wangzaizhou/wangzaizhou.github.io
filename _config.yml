@@ -1,7 +1,7 @@
 # Site settings
 title: 南山阁
 SEOTitle: 我的博客
-header-img: img/post-bg-os-metro.jpg
+header-img: img/Technology.jpg
 email: wangzaizhou@foxmail.com
 description: "每个胜利背后都有许多尝试"
 keyword: "BY, BY Blog, 汪载舟的博客, Android, Java "
@@ -12,7 +12,7 @@ baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.true,false
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: img/avatar_m.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: img/me.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
