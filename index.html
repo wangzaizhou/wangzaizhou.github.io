@@ -2,19 +2,25 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ECharts</title>
+    <title>Google</title>
     <!-- 引入 echarts.js -->
     <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
 </head>
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 600px;height:400px;"></div>
+    <div style="width: 100%;height: auto;">
+        <div id="main" style="width: 1200px;height:400px;"></div>
+        <div id="main2" style="width: 1200px;height:400px;"></div>
+
+    </div>
+   
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
-
+        var myChart2 = echarts.init(document.getElementById('main2'));
         // 指定图表的配置项和数据
         var option = {
+            color: ['#6dd8da', '#b6a2de', '#58afed'],
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -33,12 +39,12 @@
         }
     },
     legend: {
-        data: ['件数',  '累计百分比']
+        data: ['错误次数','百分比(%)',  '累计百分比']
     },
     xAxis: [
         {
             type: 'category',
-            data: ['执行医嘱未签字', '无医嘱单', '标本破坏', '标本采集量少', '患者欠费', '条码与标本不符', '其他'],
+            data: ['每日饮水量', '运动是否正确', '活动时间', '主动或被动运动', '输液部位'],
             axisPointer: {
                 type: 'shadow'
             }
@@ -47,12 +53,12 @@
     yAxis: [
         {
             type: 'value',
-            name: '件数',
+            name: '',
             min: 0,
-            max: 60,
-            interval: 50,
+            max: 50,
+            interval: 5,
             axisLabel: {
-                formatter: '{value} 件'
+                formatter: '{value}'
             }
         },
         {
@@ -60,7 +66,7 @@
             name: '累计百分比',
             min: 0,
             max: 100,
-            interval: 5,
+            interval: 10,
             axisLabel: {
                 formatter: '{value} %'
             }
@@ -68,15 +74,94 @@
     ],
     series: [
         {
-            name: '件数',
+            name: '错误次数',
             type: 'bar',
-            data: [23,15,8,6,4,2,2]
+            barWidth : 50,
+            data: [48,39,34,20,0]
+        },
+        {
+            name: '百分比(%)',
+            type: 'bar',
+            barWidth : 50,
+            data: [34.04,27.66,24.11,14.19,0]
         },
         {
             name: '累计百分比',
             type: 'line',
             yAxisIndex: 1,
-            data: [25,35,68,82,90,95,100]
+            data: [34.04,61.7,85.81,100,100]
+        }
+        
+    ]
+};
+
+
+var option2 = {
+    color: ['#61d82a', '#b2a21e', '#58afed'],
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            crossStyle: {
+                color: '#999'
+            }
+        }
+    },
+    toolbox: {
+        feature: {
+            dataView: {show: true, readOnly: false},
+            magicType: {show: true, type: ['line', 'bar']},
+            restore: {show: true},
+            saveAsImage: {show: true}
+        }
+    },
+    legend: {
+        data: ['错误次数', '累计百分比']
+    },
+    xAxis: [
+        {
+            type: 'category',
+            data: ['问题1', '问题2', '问题3', '问题4', '问题5'],
+            axisPointer: {
+                type: 'shadow'
+            }
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            name: '错误次数',
+            min: 0,
+            max: 50,
+            interval: 5,
+            axisLabel: {
+                formatter: '{value}'
+            }
+        },
+        {
+            type: 'value',
+            name: '累计百分比',
+            min: 0,
+            max: 100,
+            interval: 10,
+            axisLabel: {
+                formatter: '{value} %'
+            }
+        }
+    ],
+    series: [
+        {
+            name: '错误次数',
+            type: 'bar',
+            barWidth : 50,
+            data: [48,39,34,20,0]
+        },
+        
+        {
+            name: '累计百分比',
+            type: 'line',
+            yAxisIndex: 1,
+            data: [34.04,61.7,85.81,100,0]
         }
         
     ]
@@ -85,6 +170,8 @@
 
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
+
+        myChart2.setOption(option2);
     </script>
 </body>
 </html>
