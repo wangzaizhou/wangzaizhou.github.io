@@ -10,14 +10,14 @@
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div style="width: 100%;height: auto;">
         <div id="main" style="width: 1200px;height:400px;"></div>
-        <div id="main2" style="width: 1200px;height:400px;"></div>
+        <!-- <div id="main2" style="width: 1200px;height:400px;"></div> -->
 
     </div>
    
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
-        var myChart2 = echarts.init(document.getElementById('main2'));
+        // var myChart2 = echarts.init(document.getElementById('main2'));
         // 指定图表的配置项和数据
         var option = {
             color: ['#6dd8da', '#b6a2de', '#58afed'],
@@ -171,7 +171,7 @@ var option2 = {
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
 
-        myChart2.setOption(option2);
+        // myChart2.setOption(option2);
     </script>
 </body>
 </html>
